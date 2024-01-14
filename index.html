@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Notizblock</title>
+    <link rel="import" href="deletedNotes.html">
+    <link rel="html" href="deletedNotes.html">
+  </head>
+  <body onload="render()">
+    <nav>
+      <div id="deletedNotes"><a href="deletedNotes.html">Papierkorb</a></div>
+      <div class="gap-line"></div>
+      <div id="activeNotes"><a href="index.html">Notizen</a></div>
+    </nav>
+    <div class="headline">
+      <img class="notes-icon" src="img/notes-icon.png" alt="notes-icon" />
+      <h1>Mein Notizen</h1>
+    </div>
+    <div class="inputBox">
+      <h2>Titel</h2>
+      <input type="text" maxlength="40" placeholder="Titel eingeben..." id="titleInput" />
+      <h2>Notiz</h2>
+      <input id="noticeInput" maxlength="50" type="text" placeholder="Notiz eingeben..." max="100"/>
+        <img onclick="addNote()" class="add-icon" src="img/add.png" alt="add-icon">
+    </div>
+
+    <div id="content"></div>
+   
+  </body>
+</html>
